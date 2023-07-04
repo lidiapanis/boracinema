@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "251665958700",
+    "project_id": "boracinema-ccace",
+    "storage_bucket": "boracinema-ccace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251665958700:android:fa00d045c5c31ee6cd0e89",
+        "android_client_info": {
+          "package_name": "com.example.teste"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "251665958700-citvakavjnikqpjq4c3f40hvf3h43jq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx1gW8s418XJvg-_Zjj6kPte8DfIL5gcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "251665958700-citvakavjnikqpjq4c3f40hvf3h43jq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
