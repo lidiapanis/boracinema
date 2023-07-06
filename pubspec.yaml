@@ -44,6 +44,10 @@ dependencies:
   geocoding: ^2.1.0
   firebase_core: ^2.14.0
   firebase_auth: ^4.6.3
+  formatdate_pk:
+    git:
+      url: https://github.com/lidiapanis/Formatador_datas.git
+      ref: main
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:teste/global_keys.dart';
 import 'package:teste/routes/route_paths.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -58,6 +59,7 @@ class _SignInScreenState extends State<SignInScreen> {
             children: [
               Image.asset('lib/assets/Bora2.png'),
               TextField(
+                key: AppGlobalKeys.inputEmailKey,
                 controller: emailController,
                 decoration: InputDecoration(labelText: "E-mail"),
               ),

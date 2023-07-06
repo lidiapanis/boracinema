@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:formatdate_pk/formatdate_pk.dart';
 
 class MovieList extends StatefulWidget {
   const MovieList({super.key});
@@ -79,6 +80,8 @@ class _MovieListState extends State<MovieList> {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
+        String date = selectedMovie['release_date'] as String;
+        date = formatDate(date);
         return Container(
           padding: EdgeInsets.all(20.0),
           child: Column(
@@ -90,21 +93,28 @@ class _MovieListState extends State<MovieList> {
               ),
               SizedBox(height: 8.0),
               Text(
-                'Lançamento: ${selectedMovie['release_date']}',
+                'Lançamento:' + formatDate(date),
                 style: TextStyle(fontSize: 16.0),
+                selectionColor: Colors.grey,
               ),
               SizedBox(height: 8.0),
               Text(
                 'Avaliação: ${selectedMovie['vote_average']}/10',
                 style: TextStyle(fontSize: 16.0),
+                selectionColor: Colors.grey,
               ),
               SizedBox(height: 16.0),
-              ElevatedButton(
+              Text(
+                'Sinopse: ${selectedMovie['overview']}',
+                style: TextStyle(fontSize: 16.0),
+              ),
+              //SizedBox(height: 16.0),
+              /*ElevatedButton(
                 child: Text('Encontrar cinema próximo'),
                 onPressed: () {
                   //findNearestCinema();
                 },
-              ),
+              ),*/
             ],
           ),
         );
@@ -165,6 +175,7 @@ class _MovieListState extends State<MovieList> {
         home: Scaffold(
       appBar: AppBar(
         title: Text('Bora para o Cinema?'),
+        backgroundColor: Colors.black,
         actions: [
           IconButton(
             icon: Icon(Icons.exit_to_app),
@@ -183,7 +194,7 @@ class _MovieListState extends State<MovieList> {
                   'Arraste para o lado para navegar entre os filmes.\nClique no cartaz para ter mais informações sobre o filme.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.blue[900],
+                    color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w300,
                   ),
