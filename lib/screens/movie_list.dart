@@ -80,8 +80,8 @@ class _MovieListState extends State<MovieList> {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        String date = selectedMovie['release_date'] as String;
-        date = formatDate(date);
+        String data = selectedMovie['release_date'] as String;
+        String dataFormatada = formatDate(data);
         return Container(
           padding: EdgeInsets.all(20.0),
           child: Column(
@@ -93,7 +93,7 @@ class _MovieListState extends State<MovieList> {
               ),
               SizedBox(height: 8.0),
               Text(
-                'Lançamento:' + formatDate(date),
+                'Lançamento: $dataFormatada',
                 style: TextStyle(fontSize: 16.0),
                 selectionColor: Colors.grey,
               ),
